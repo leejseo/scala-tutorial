@@ -1,5 +1,19 @@
 import scala.util.parsing.combinator._
 
+/*
+Definition of AE (= Arithmetic Expression)
+
+Digit := "0" | "1" | ... | "9"
+
+Nat := Digit
+     | Digit + Nat
+
+expr := Nat
+      | "(" + expr + "+" + expr + ")"
+      | "(" + expr + "-" + expr + ")"
+
+*/
+
 sealed trait AE
 
 case class Num(val n: Int) extends AE
